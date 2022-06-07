@@ -1,0 +1,62 @@
+﻿
+@* Login.csshtmlden kopyaladık *@
+@using Makale.Entities.ViewModels
+@model RegisterViewModel
+@{
+    ViewBag.Title = "Kayıt Sayfası";
+}
+
+<link href="~/Content/Login.css" rel="stylesheet" />
+<link href="~/Content/validation-summary.css" rel="stylesheet" />
+
+@using (Html.BeginForm())
+{
+    <section class="login-info">
+        <div class="container">
+            <div class="row main">
+                <div class="form-header">
+                    <h1 class="text-center ">Kayıt Formu</h1>
+                </div>
+                <div class="main-content">
+                    @Html.ValidationSummary(false)
+                    <div class="input-group ">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                        @*<input id="email" type="text" class="form-control" name="email" placeholder="Kullanıcı Adı">*@
+                        @Html.TextBoxFor(model => model.KullaniciAdi, new { @class = "form-control", placeholder = "Kullanıcı Adınız" })
+                    </div>
+
+                    <div class="input-group ">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                        @*<input id="email" type="text" class="form-control" name="email" placeholder="Kullanıcı Adı">*@
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "E-Posta Adresiniz" })
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+                        @*<input id="password" type="password" class="form-control" name="password" placeholder="Şifre">*@
+                        @Html.TextBoxFor(model => model.Sifre, new { @class = "form-control", placeholder = "Şifreniz", type = "password" })
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+                        @*<input id="password" type="password" class="form-control" name="password" placeholder="Şifre">*@
+                        @Html.TextBoxFor(model => model.Sifre2, new { @class = "form-control", placeholder = "Şifreniz Tekrar", type = "password" })
+                    </div>
+
+                    <div class="form-group ">
+                        <button type="submit" class="btn btn-danger btn-lg btn-block login-button">Giriş</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+@*<script>
+    $(function () {
+        $("footer").parent().hide();
+
+    });
+</script>*@

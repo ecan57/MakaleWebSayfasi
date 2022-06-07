@@ -1,0 +1,122 @@
+﻿@model Makale.Entities.Kullanici
+
+@{
+    ViewBag.Title = "Kullanıcı Detay";
+}
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <h2>Kullanıcı Detay</h2>
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Adi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Adi)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Soyadi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Soyadi)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.KullaniciAdi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.KullaniciAdi)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Sifre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Sifre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ProfilResmi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ProfilResmi)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Admin)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Admin)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Aktif)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Aktif)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.KayitTarihi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.KayitTarihi)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DegistirmeTarihi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DegistirmeTarihi)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DegistirenKullanici)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DegistirenKullanici)
+                </dd>
+
+            </dl>
+        </div>
+        <div class="col-md-10 col-md-offset-1">
+            <p>
+                <a href="/Kullanici/Edit/@Model.Id" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-edit"></span>
+                    Düzenle
+                </a>
+                <a href="/Kullanici/Index" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                    Listeye Geri Dön
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
